@@ -7,4 +7,4 @@ describe('Counter', () => {
 
     expect(screen.getByText('Hi!'))
   })
-})
+});
