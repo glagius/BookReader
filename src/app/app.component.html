@@ -1,1 +1,23 @@
-<h3>Hi there!</h3>
+<ul>
+  <li>
+    <a [routerLink]="'/'"
+       routerLinkActive="active"> Home </a>
+  </li>
+  <li>
+    <a [routerLink]="'/favourites'"
+       routerLinkActive="active"> Favourites </a>
+  </li>
+  <li>
+    <a [routerLink]="'/options'"
+       routerLinkActive="active"> Options </a>
+  </li>
+  <li>
+    <a [routerLink]="'/account'"
+       routerLinkActive="active"> Account </a>
+  </li>
+  <li>
+    <a [routerLink]="['/:book', 1]"
+       routerLinkActive="active"> Book </a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
