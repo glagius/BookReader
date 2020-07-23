@@ -11,11 +11,11 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'home/:book',
@@ -28,7 +28,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [] // add guard here
+    canActivate: [], // add guard here
   },
   {
     path: 'favourites',
@@ -37,20 +37,20 @@ const routes: Routes = [
   // TODO: move account to nested route of options
   {
     path: 'options',
-    component: OptionsComponent
+    component: OptionsComponent,
   },
   {
     path: 'account',
-    component: AccountComponent
+    component: AccountComponent,
   },
   {
     path: '**',
-    redirectTo: '/home'
+    redirectTo: '/home',
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

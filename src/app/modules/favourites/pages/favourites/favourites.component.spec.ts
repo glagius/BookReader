@@ -8,9 +8,9 @@ describe('FavouritesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FavouritesComponent ]
+      declarations: [FavouritesComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

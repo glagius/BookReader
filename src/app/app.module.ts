@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountModule } from './modules/account/account.module';
 import { AsideModule } from './modules/aside/aside.module';
 import { HomeModule } from './modules/home/home.module';
@@ -24,9 +24,9 @@ import { LoginModule } from './modules/login/login.module';
     LoginModule,
   ],
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

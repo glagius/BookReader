@@ -4,13 +4,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AccountComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit(): void {
   }
-
 }

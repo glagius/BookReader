@@ -4,13 +4,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-favourites',
   templateUrl: './favourites.component.html',
   styleUrls: ['./favourites.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FavouritesComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit(): void {
   }
-
 }
