@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,17 +12,17 @@ import { BookModule } from './modules/book/book.module';
 import { FavouritesModule } from './modules/favourites/favourites.module';
 import { LoginModule } from './modules/login/login.module';
 
+const MaterialModules = [MatTabsModule];
+const PageModules = [AccountModule, HomeModule, BookModule, FavouritesModule, LoginModule];
+
 @NgModule({
   imports: [
-    AccountModule,
     AsideModule,
-    HomeModule,
-    BookModule,
-    FavouritesModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LoginModule,
+    ...MaterialModules,
+    ...PageModules,
   ],
   declarations: [
     AppComponent,

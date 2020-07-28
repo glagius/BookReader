@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MovieApp';
+
+  links = ['home', 'favourites', 'options', 'account']
+
+  activeLink = this.links[0]
 }

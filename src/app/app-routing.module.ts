@@ -17,6 +17,7 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  // ! This should be page BOOK with components Books.
   {
     path: 'home/:book',
     component: BookComponent,

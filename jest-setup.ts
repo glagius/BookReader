@@ -1,4 +1,5 @@
 import 'jest-preset-angular';
+import '@testing-library/jest-dom/extend-expect';
 
 Object.defineProperty(window, 'CSS', { value: null });
 Object.defineProperty(document, 'doctype', {

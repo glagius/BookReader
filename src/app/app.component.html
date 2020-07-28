@@ -1,23 +1,10 @@
-<ul>
-  <li>
-    <a [routerLink]="'/'"
-       routerLinkActive="active"> Home </a>
-  </li>
-  <li>
-    <a [routerLink]="'/favourites'"
-       routerLinkActive="active"> Favourites </a>
-  </li>
-  <li>
-    <a [routerLink]="'/options'"
-       routerLinkActive="active"> Options </a>
-  </li>
-  <li>
-    <a [routerLink]="'/account'"
-       routerLinkActive="active"> Account </a>
-  </li>
-  <li>
-    <a [routerLink]="['/:book', 1]"
-       routerLinkActive="active"> Book </a>
-  </li>
-</ul>
+<nav mat-tab-nav-bar
+     data-testId="navigation">
+  <a mat-tab-link
+     [attr.data-testId]="link"
+     *ngFor="let link of links"
+     [routerLink]="[link]"
+     (click)="activeLink = link"
+     [active]="activeLink == link">{{link}}</a>
+</nav>
 <router-outlet></router-outlet>

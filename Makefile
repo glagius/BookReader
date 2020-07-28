@@ -12,7 +12,7 @@ build: lint
 lint:
 	npm run lint
 
-test: lint
+test:
 	npm run test
 
 test-e2e: lint
