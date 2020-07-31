@@ -15,5 +15,5 @@ lint:
 test:
 	npm run test
 
-test-e2e: lint
+test-e2e:
 	npm run e2e
