@@ -73,6 +73,9 @@
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
       "<rootDir>/jest-setup.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "cypress"
     ]
   },
   "lint-staged": {

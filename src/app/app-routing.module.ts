@@ -6,8 +6,9 @@ import { OptionsComponent } from './modules/options/pages/options/options.compon
 import { BookComponent } from './modules/book/pages/book/book.component';
 import { AccountComponent } from './modules/account/pages/account/account.component';
 import { HomeComponent } from './modules/home/pages/home/home.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     redirectTo: '/home',
@@ -23,10 +24,6 @@ const routes: Routes = [
     component: BookComponent,
   },
   {
-    path: 'favourites/:book',
-    component: BookComponent,
-  },
-  {
     path: 'login',
     component: LoginComponent,
     canActivate: [], // add guard here
@@ -34,15 +31,22 @@ const routes: Routes = [
   {
     path: 'favourites',
     component: FavouritesComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+    children: [
+      { path: ':book', component: BookComponent },
+    ],
   },
   // TODO: move account to nested route of options
   {
     path: 'options',
     component: OptionsComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'account',
     component: AccountComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: '**',
