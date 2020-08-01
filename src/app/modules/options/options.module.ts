@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OptionsComponent } from './pages/options/options.component';
 
-
-
-@NgModule({
+NgModule({
   declarations: [OptionsComponent],
   imports: [
-    CommonModule
-  ]
-})
+    CommonModule,
+  ],
+});
 export class OptionsModule { }

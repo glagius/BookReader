@@ -1,0 +1,10 @@
+{
+  "include": [
+    "integration/app/*.ts"
+  ],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true
+  }
+}

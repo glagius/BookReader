@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import makeServer from '../../../src/server.js';
+import makeServer from '../../../src/server';
 
 describe('First test', () => {
   let server;

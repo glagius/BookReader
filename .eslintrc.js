@@ -29,6 +29,9 @@ module.exports = {
     //   },
     // ],
   },
+  globals: {
+    "cy": true
+  },
   overrides: [
     /**
      * This extra piece of configuration is only necessary if you make use of inline

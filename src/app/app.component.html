@@ -1,10 +1,10 @@
 <nav mat-tab-nav-bar
-     data-testId="navigation">
-  <a mat-tab-link
-     [attr.data-testId]="link"
-     *ngFor="let link of links"
-     [routerLink]="[link]"
-     (click)="activeLink = link"
-     [active]="activeLink == link">{{link}}</a>
+     data-test-id="navigation">
+   <a mat-tab-link
+      [attr.data-testId]="link"
+      *ngFor="let link of links"
+      [routerLink]="[link]"
+      (click)="activeLink = link"
+      [active]="activeLink == link">{{link}}</a>
 </nav>
 <router-outlet></router-outlet>
