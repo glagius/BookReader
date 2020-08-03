@@ -86,11 +86,11 @@
     ]
   },
   "lint-staged": {
-    "*": "npm run lint"
+    "*.(ts|js)": "eslint --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged --relative"
     }
   }
 }
