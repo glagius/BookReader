@@ -14,31 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-/* eslint-disable no-undef */
-/* eslint-disable no-param-reassign */
-import './commands';
-import { configure } from '@testing-library/cypress';
 
 require('core-js/es/reflect');
 require('core-js/stable/reflect');
 require('core-js/features/reflect');
 require('cypress-angular-unit-test/support');
-
-configure({ testIdAttribute: 'data-test-id' });
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-Cypress.on('window:before:load', (win) => {
-  win.handleFromCypress = (request) => fetch(request.url, {
-    method: request.method,
-    headers: request.requestHeaders,
-    body: request.requestBody,
-  }).then((res) => {
-    const content = res.headers.map['content-type'] === 'application/json'
-      ? res.json()
-      : res.text();
-    return new Promise((resolve) => {
-      content.then((body) => resolve([res.status, res.headers, body]));
-    });
-  });
-});

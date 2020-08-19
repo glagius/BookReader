@@ -12,9 +12,17 @@ import { BookModule } from './modules/book/book.module';
 import { FavouritesModule } from './modules/favourites/favourites.module';
 import { LoginModule } from './modules/login/login.module';
 import { CoreModule } from './core/core.module';
+import { OptionsModule } from './modules/options/options.module';
+import { AuthService } from './core/auth/auth.service';
 
 const MaterialModules = [MatTabsModule];
-const PageModules = [AccountModule, HomeModule, BookModule, FavouritesModule, LoginModule];
+const PageModules = [
+  AccountModule,
+  HomeModule,
+  BookModule,
+  FavouritesModule,
+  LoginModule,
+  OptionsModule];
 
 @NgModule({
   imports: [
@@ -29,7 +37,7 @@ const PageModules = [AccountModule, HomeModule, BookModule, FavouritesModule, Lo
   declarations: [
     AppComponent,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

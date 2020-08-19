@@ -32,6 +32,13 @@ module.exports = {
   globals: {
     "cy": true
   },
+  settings: {
+    "import/resolver": {
+      typescript: {
+        project: "./tsconfig.json"
+      }
+    },
+  },
   overrides: [
     /**
      * This extra piece of configuration is only necessary if you make use of inline

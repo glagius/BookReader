@@ -6,6 +6,8 @@ export default function makeServer({ environment = 'development' } = {}) {
 
     models: {
       user: Model,
+      books: Model,
+      settings: Model,
     },
 
     seeds(s) {
@@ -14,9 +16,13 @@ export default function makeServer({ environment = 'development' } = {}) {
     },
 
     routes() {
-      this.namespace = 'api';
-
-      this.get('/users', (schema) => schema.users.all());
+      this.post('/login', (schema, req) => {
+        console.log('Login Schema - ', schema, '\nLogin req = ', req);
+      });
+      this.get('/users', (schema) => {
+        console.log('Get Users = ', schema);
+        return schema.users.all();
+      });
     },
   });
 

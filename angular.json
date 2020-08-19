@@ -82,9 +82,7 @@
             "browserTarget": "book-reader:build"
           }
         },
-        "test": {
-          "builder": "@angular-builders/jest:run"
-        },
+        "test": {},
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
@@ -98,7 +96,47 @@
             ]
           }
         },
-        "e2e": {}
+        "e2e": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "book-reader:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "book-reader:serve:production"
+            }
+          },
+          "styles": [
+            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+            "src/styles.scss"
+          ]
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "book-reader:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "book-reader:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "book-reader:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "book-reader:serve:production"
+            }
+          }
+        }
       }
     }
   },

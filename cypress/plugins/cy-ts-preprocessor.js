@@ -20,7 +20,7 @@ const webpackOptions = {
         exclude: [/node_modules/],
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.(css)$/,
         loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
         exclude: /\.async\.(css)$/,
       },
