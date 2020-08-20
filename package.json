@@ -49,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/eslint-plugin-tslint": "^3.7.0",
     "@typescript-eslint/parser": "2.31.0",
+    "angular-router-loader": "^0.8.5",
     "angular2-template-loader": "^0.6.2",
     "codelyzer": "^5.1.2",
     "concurrently": "^5.2.0",

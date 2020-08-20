@@ -24,12 +24,12 @@ describe('Basics', () => {
       imports: [
         AppRoutingModule,
         MatTabsModule,
-        // HomeModule,
-        // LoginModule,
-        // BookModule,
-        // FavouritesModule,
-        // OptionsModule,
-        // AccountModule,
+        HomeModule,
+        LoginModule,
+        BookModule,
+        FavouritesModule,
+        OptionsModule,
+        AccountModule,
       ],
       providers: [AuthService, AuthGuard, { provide: APP_BASE_HREF, useValue: '/' }],
     });

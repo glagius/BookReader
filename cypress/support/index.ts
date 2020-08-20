@@ -15,7 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 
-require('core-js/es/reflect');
-require('core-js/stable/reflect');
-require('core-js/features/reflect');
-require('cypress-angular-unit-test/support');
+import 'core-js/es/reflect';
+import 'core-js/stable/reflect';
+import 'core-js/features/reflect';
+import 'cypress-angular-unit-test/support';
+import '@testing-library/cypress/add-commands';
