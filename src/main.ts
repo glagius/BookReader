@@ -5,7 +5,7 @@ import { Server, Response } from 'miragejs';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-import makeServer from './server.js';
+import makeServer from './server';
 
 if (environment.production) {
   enableProdMode();

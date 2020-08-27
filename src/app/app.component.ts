@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from './core/auth/auth.service';
 import { UserInfo } from '~shared/models/models';
+import { BooksDataService } from './core/http/books-data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,22 +9,26 @@ import { UserInfo } from '~shared/models/models';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'MovieApp';
+  public title = 'MovieApp';
 
-  links = [
+  public links = [
     { name: 'home', needLogin: false },
     { name: 'favourites', needLogin: true },
     { name: 'options', needLogin: true },
     { name: 'account', needLogin: true },
   ]
 
-  activeLink = 'home'
+  public activeLink = 'home'
 
-  user: UserInfo | {} = {}
+  public user: UserInfo | {} = {}
 
-  isLogged = false
+  public isLogged = false
 
-  constructor(private auth: AuthService) {
+  constructor(
+    private auth: AuthService,
+    private booksService: BooksDataService,
+  ) {
     this.isLogged = this.auth.isLogged();
+    this.booksService.getBooks();
   }
 }

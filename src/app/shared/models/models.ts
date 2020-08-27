@@ -6,7 +6,7 @@ export interface UserInfo {
   firstName: string;
   lastName: string;
   email: string;
-  favourites: Book[] | [];
+  favourites: string[] | [];
   settings: AccountSettings;
 }
 
@@ -21,6 +21,9 @@ export interface RegistrationInfo {
   lastName: string;
 }
 
+/**
+ * Book Author
+ */
 export interface Author {
   id: string;
   firstName: string;
@@ -29,12 +32,21 @@ export interface Author {
   info?: string;
 }
 
+/**
+ * Books statuses
+ */
+export enum BookStatus {
+  new = 'new',
+  bestseller = 'bestseller',
+}
 export interface Book {
   id: string;
   title: string;
   description: string;
-  author: Author;
+  author: string; // Change this to Author model
   pages?: string;
   price?: string;
+  logo?: string;
+  status?: BookStatus;
   // and many others
 }

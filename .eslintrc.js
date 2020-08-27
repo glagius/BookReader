@@ -12,6 +12,7 @@ module.exports = {
     'jest': true
   },
   rules: {
+    'no-empty-function': ["error", { "allow": ["constructors"] }],
     'import/extensions': 0,
     'import/no-extraneous-dependencies': 0
     // ORIGINAL tslint.json -> "directive-selector": [true, "attribute", "app", "camelCase"],
@@ -21,7 +22,7 @@ module.exports = {
     //     type: 'attribute', prefix: 'app', style: 'camelCase',
     //   },
     // ],
-    // // ORIGINAL tslint.json -> "component-selector": [true, "element", "app", "kebab-case"],
+    // ORIGINAL tslint.json -> "component-selector": [true, "element", "app", "kebab-case"],
     // '@angular-eslint/component-selector': [
     //   'error',
     //   {
